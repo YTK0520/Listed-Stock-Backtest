@@ -1,8 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[14]:
-
 
 #股票資訊爬蟲
 import xlwings as xw
@@ -214,9 +212,6 @@ last_cell=portfolio.range("B1").end("down").row
 portfolio.range(f"B{last_cell+1}").value=sum(portfolio.range(f"B2:B{last_cell}").value)
 portfolio.range("K4").value=["總收益", portfolio.range(f"B{last_cell+1}").value]
 nwb.save("rsistrategy")
-
-
-# In[16]:
 
 
 #line notify提示總收益
